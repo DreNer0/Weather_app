@@ -5,6 +5,11 @@ body{
   margin: 0;
   padding: 0;
   font-family: Roboto;
+  background-image: url(imageWeather/ДождливаяФон.png);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 p{
   margin: 0;
@@ -37,11 +42,14 @@ p{
   justify-content: center;
   font-weight: bold;
   font-size: 25px;
-  border: 1px solid black;
+  border: 1px solid rgb(108, 130, 189);
   border-left:0px;
   border-right: 0px;
   border-top: 0px;
+  border-radius:25px 25px 0px 0px ;
   padding-bottom: 5px;
+  color: rgb(174, 175, 255);
+  background-color: rgb(41, 72, 162);
 }
 .containerTypeCity{
   display: flex;
@@ -60,12 +68,16 @@ p{
   border: 1px solid;
   padding-right:10px ;
 }
+#city:focus{
+  outline: none;
+}
 #button{
   width: 20%;
   height: 100%;
   border: none;
-  color: white;
-  background-color: black;
+  color: rgb(219, 180, 255);
+  background-color: rgb(32, 248, 255);
+  border: 1px solid rgb(111, 202, 255);
   font-weight:bold;
 }
 .infoCity{
@@ -74,9 +86,11 @@ p{
   align-items: center;
 }
 .imageInfo{
-  object-fit: contain;
   width: 100%;
   height: 100%;
-  border: 1px solid black;
   border-radius: 25px;
+  border:1px solid rgb(41, 72, 162);
+  background-image:url(imageWeather/дождливаяПогода.png) ;
+  background-size: cover;
+  
 }
