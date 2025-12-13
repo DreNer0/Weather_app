@@ -1,15 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sen:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sen:wght@400..800&display=swap');
 
-
+*{
+  margin: 0;
+  padding: 0;
+}
 body{
   margin: 0;
   padding: 0;
-  font-family: Roboto;
-  background-image: url(imageWeather/ДождливаяФон.png);
+  font-family: "Roboto";
+  background-image: url(imageWeather/снежнаяПогодаФон.png);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
   min-height: 100vh;
+}
+.weatherMainWin{
+  height: 100vh;
+  width: 100%;
+}
+.water{
+  height: 100vh;
+  background-image: url(weather/snow.png);
+  animation: water 0.2s linear infinite;
+}
+@keyframes water {
+  from{
+    background-position: 0 0 ;
+  }
+  to{
+    background-position: -20px 100px;
+  }
 }
 p{
   margin: 0;
@@ -23,8 +43,8 @@ p{
   grid-template-rows: 1fr 3fr;
   width: 20%;
   height: 80%;
-  background-color: transparent;
-  border: 1px solid black;
+  background-color: rgb(112, 202, 253);
+  border:1px solid rgb(80, 229, 255);
   border-radius: 25px;
   font-size: 20px;
 }
@@ -65,8 +85,9 @@ p{
   width: 80%;
   padding: 5px;
   border-radius: 25px 0px 0px 25px ;
-  border: 1px solid;
+  border: none;
   padding-right:10px ;
+  font-size: 18px;
 }
 #city:focus{
   outline: none;
@@ -75,22 +96,26 @@ p{
   width: 20%;
   height: 100%;
   border: none;
-  color: rgb(219, 180, 255);
-  background-color: rgb(32, 248, 255);
-  border: 1px solid rgb(111, 202, 255);
+  color: rgb(198, 138, 255);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(112, 158, 255);
   font-weight:bold;
+  cursor: pointer;
 }
 .infoCity{
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 2fr;
   align-items: center;
+   color: rgb(25, 0, 255);
+   font-size: 30px;
+  font-family:"Alumni Sans";
 }
 .imageInfo{
   width: 100%;
   height: 100%;
   border-radius: 25px;
   border:1px solid rgb(41, 72, 162);
-  background-image:url(imageWeather/дождливаяПогода.png) ;
+  background-image:url(imageWeather/солнечнаяПогода.png) ;
   background-size: cover;
   
 }
